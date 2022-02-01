@@ -110,13 +110,13 @@
     let firstName = 'Yaroslav';
     let middleName ='Soyma';
     let lastName = 'Dmitrovich';
-    let person=(middleName+""+firstName+lastName)
+    let person=(middleName+""+firstName+''+lastName)
     console.log(person)
     // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
     let age = 20;
-    prompt(person[0].firstName)
-    prompt(person[2].lastName)
-    prompt(age)
+    prompt("Yaroslav")
+    prompt("Dmitrovich")
+    prompt("20")
     // Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
     document.write(' Вітаю Ярослав Дмитрович. Тобі 20 років');
     // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
