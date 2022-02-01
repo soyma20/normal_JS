@@ -113,7 +113,6 @@
     let person=(middleName+""+firstName+''+lastName)
     console.log(person)
     // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
-    let age = 20;
     prompt("Yaroslav")
     prompt("Dmitrovich")
     prompt("20")
