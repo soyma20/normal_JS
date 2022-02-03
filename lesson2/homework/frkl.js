@@ -38,34 +38,34 @@
 //     console.log(test);
 
 // - Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
-    let a = prompt('Aren`t you zero?');
-    if (a != 0){
+    let a = +prompt('Aren`t you zero?');
+    if (a !== 0){
         console.log('Вірно');
     }else{
         console.log('Невірно');
     }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.
-    let days = prompt('Який день тижня?');
+    let days = +prompt('Який день тижня?');
     switch (days){
-        case '1':
+        case 1:
             console.log("Сніданок Обід Вечеря");
             break;
-        case '2':
+        case 2:
             console.log("Обід Вечеря");
             break;
-        case '3':
+        case 3:
             console.log("Вечеря");
             break;
-        case '4':
+        case 4:
             console.log("Хліб");
             break;
-        case '5':
+        case 5:
             console.log("Апельсин");
             break;
-        case '6':
+        case 6:
             console.log("Ноут");
             break;
-        case '7':
+        case 7:
             console.log("Суп");
             break;
         default:
