@@ -55,10 +55,10 @@ function arrList(arr){
 let someArr = [66, 556, 'dnioi', true, false];
 arrList(someArr)
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
-let users =[{id: 1, name: 'Olichka', age: 21}, {id: 2, name: 'kate', age: 63},{id: 3, name: 'ivan', age: 12}];
 function arrUsers(arr) {
     for (const arrElement of arr) {
         document.write(`<div>${arrElement.id} ${arrElement.name} ${arrElement.age}</div>`);
     }
 }
+let users =[{id: 1, name: 'Olichka', age: 21}, {id: 2, name: 'kate', age: 63},{id: 3, name: 'ivan', age: 12}];
 arrUsers(users);
