@@ -24,27 +24,29 @@ sumOfArr([10,20,30], [10,20,30])
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-// let user = {
-//     name: "John",
-//     age: 30,
-//     isAdmin: true
-// }
-// let newArr = [];
-// for (let key in user) {
-//     newArr = key;
-//     console.log(newArr)
-// }
+let info = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+
+function keysINarray(arr) {
+    let keys = [];
+    for (let obj of arr) {
+        for (let key in obj) {
+            keys.push(key);
+
+        }
+    }
+    return keys;
+}
+console.log(keysINarray(info))
 //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
-// let secondArr = [];
-// for (let key in user) {
-//     secondArr = user[key]
-//     console.log(secondArr)
-// }
-// let newArr = []
-// for (let i = 0; i < user.length; i++) {
-//     newArr[i]=user[key];
-// console.log(newArr)
-// }
-
+function dataOfKeys(arr) {
+    let data =[];
+    for (let datum of arr) {
+        for (let datumKey in datum) {
+            data.push(datum[datumKey])
+        }
+    }
+    return data;
+}
+console.log(dataOfKeys(info))
