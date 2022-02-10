@@ -234,5 +234,17 @@ let usersList = [
         }
     }
 ];
-document.write(<div>)
-document.write(</div>)
+document.write(`<div class="users-box">`)
+for (let user of usersList) {
+    document.write(`<div class="user-block">`)
+        document.write(`<h2>${user.id} ${user.name} ${user.username}</h2>`)
+        document.write(`<h3>${user.email}  ${user.phone}`)
+            document.write(`<div class="address-block">`)
+                document.write(`<p>${user.address.city}</p>`)
+                document.write(`<p>${user.address.street}</p>`)
+                document.write(`<p>${user.address.suite}</p>`)
+                document.write(`<p>${user.address.zipcode}</p>`)
+            document.write(`</div>`)
+    document.write(`</div>`)
+}
+document.write(`</div>`)

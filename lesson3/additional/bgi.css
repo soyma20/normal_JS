@@ -1,0 +1,21 @@
+.users-box{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+}
+.user-block{
+    box-sizing: border-box;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8dca9;
+    border: 2px solid black;
+}
+.address-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffefd6;
+}
