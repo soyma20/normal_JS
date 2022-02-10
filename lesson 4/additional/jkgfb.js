@@ -42,9 +42,9 @@ console.log(keysINarray(info))
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
 function dataOfKeys(arr) {
     let data =[];
-    for (let datum of arr) {
-        for (let datumKey in datum) {
-            data.push(datum[datumKey])
+    for (let obj of arr) {
+        for (let Key in obj) {
+            data.push(obj[Key])
         }
     }
     return data;
