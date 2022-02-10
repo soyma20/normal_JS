@@ -24,11 +24,11 @@ sumOfArr([10,20,30], [10,20,30])
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-let user = {
-    name: "John",
-    age: 30,
-    isAdmin: true
-}
+// let user = {
+//     name: "John",
+//     age: 30,
+//     isAdmin: true
+// }
 // let newArr = [];
 // for (let key in user) {
 //     newArr = key;
@@ -42,8 +42,9 @@ let user = {
 //     secondArr = user[key]
 //     console.log(secondArr)
 // }
-let newArr = []
-for (let i = 0; i < user.length; i++) {
-    newArr[i]=user[key];
-}
-console.log(newArr)
+// let newArr = []
+// for (let i = 0; i < user.length; i++) {
+//     newArr[i]=user[key];
+// console.log(newArr)
+// }
+
