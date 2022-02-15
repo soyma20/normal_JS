@@ -61,10 +61,7 @@ let coursesAndDurationArray = [
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 let longest = coursesAndDurationArray.sort((a,b)=>b.monthDuration-a.monthDuration);
 console.log(longest);
-let longer5month =[];
-for (let element of longest) {
-    if (element.monthDuration>5){
-        longer5month.push(element)
-    }
-}
-console.log(longer5month);
+let sixMonthmin =coursesAndDurationArray.filter(value => {
+    return value.monthDuration>5;
+})
+console.log(sixMonthmin)
