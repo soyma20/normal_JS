@@ -2,12 +2,36 @@
 //     a. заповнити його 50 парними числами за допомоги циклу.
 let empty = [];
 for (let i = 0; i < 50; i++) {
-    empty[i]=2;
+    if (i%6===0){
+        empty[i]=12;
+    }else if (i%5===0){
+        empty[i]=8;
+    } else if (i%4===0){
+        empty[i]=6;
+    }else if (i%3===0){
+        empty[i]=4;
+    }else if (i%2===0){
+        empty[i]=2;
+    }else {
+        empty[i]=10;
+    }
 }
 console.log(empty);
 //     b. заповнити його 50 непарними числами за допомоги циклу.
 for (let i = 0; i < 50; i++) {
-    empty[i]=1;
+    if (i%6===0){
+        empty[i]=11;
+    } else if (i%5===0){
+        empty[i]=7;
+    } else if (i%4===0){
+        empty[i]=5;
+    }else if (i%3===0){
+        empty[i]=3;
+    }else if (i%2===0){
+        empty[i]=1;
+    }else {
+        empty[i]=9;
+    }
 }
 console.log(empty)
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
@@ -78,14 +102,14 @@ for (let element of lg) {
 console.log(gl)
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
-let usersWithId = [
+let users = [
     {id: 1, name: 'vasya', age: 31, status: false},
     {id: 2, name: 'petya', age: 30, status: true},
     {id: 3, name: 'kolya', age: 29, status: true},
     {id: 4, name: 'olya', age: 28, status: false}
 ];
 //
-let citiesWithId = [
+let cities = [
     {user_id: 3, country: 'USA', city: 'Portland'},
     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
     {user_id: 2, country: 'Poland', city: 'Krakow'},
@@ -95,20 +119,23 @@ let citiesWithId = [
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 //     Записати цей об'єкт в новий масив
 let asd = [];
-for (let i = 0, j = usersWithId.length-1; i < usersWithId.length; i++, j--) {
-    if (usersWithId[i].id === citiesWithId[i].user_id){
-        usersWithId[i].address = citiesWithId[i];
-        asd[i]=usersWithId[i];
-    }else if (usersWithId[j].id === citiesWithId[i].user_id){
-        usersWithId[j].address = citiesWithId[i];
-        asd[i]=usersWithId[j];
-    }else if (usersWithId[i].id === citiesWithId[j].user_id){
-        usersWithId[i].address = citiesWithId[j];
-        asd[i]=usersWithId[j].address =citiesWithId[j];
-        asd[i]=usersWithId[j];
-    }else{
-        usersWithId[i].address = citiesWithId[i];
-        asd[i]=usersWithId[i];
+for (let j = 0, m = users.length-1, b = 1; j < users.length; j++, m--, b++) {
+    let reverseCity = cities[m];
+    let cityPlus = cities[b];
+    let city = cities[j];
+    let user = users[j];
+    if (user.id === city.user_id ){
+        user.address = city;
+        asd[j]=user;
+    }else if(user.id === reverseCity.user_id ){
+        user.address = reverseCity;
+        asd[j]=user;
+    }else if (user.id === cityPlus.user_id){
+        user.address = cityPlus;
+        asd[j]=user;
+    }else {
+        user.address = cities[j - 2];
+        asd[j]=user;
     }
 }
 console.log(asd)
