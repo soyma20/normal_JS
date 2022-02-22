@@ -29,10 +29,38 @@ for (const element of aaa) {
     element.classList.add('anchor');
 }
 // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
-
+for (const aaaElement of aaa) {
+    if(aaaElement.innerText === 'link3'){
+        aaaElement.style.fontSize = '40px'
+    }
+}
 // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+for (const element of aaa) {
+    console.log(element);
+    let XXX = element.innerText
+    element.classList.add(`element_${XXX}`)
+}
 // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+let sub = document.getElementsByClassName('sub-header');
+console.log(sub);
+for (const subElement of sub) {
+    subElement.style.background = prompt('Background of header')
+}
 // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+for (const subElement of sub) {
+    if (subElement.innerText === 'content 2 segment'){
+        subElement.style.color = prompt('Text color')
+    }
+}
 // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+let firstCont = document.getElementsByClassName('content_1');
+console.log(firstCont);
+firstCont[0].innerText = prompt('Some text');
 // l) отримати елементи p та змінити їм padding на 20px
+let ppp = document.getElementsByTagName('p');
+for (const pppElement of ppp) {
+    pppElement.style.padding  = '20px';
+}
 // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year. Пример sep-2021)
+let text2 = document.getElementsByClassName('text2');
+text2[0].innerText = 'dec-2021';
