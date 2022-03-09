@@ -25,9 +25,10 @@ let keys = 'keys';
 
 let saveData = (model, type, volume) =>{
     let arrdata = JSON.parse(localStorage.getItem(data)) || [];
+
     arrdata.push({model,type,volume});
     localStorage.setItem(keys, JSON.stringify(arrdata));
 };
 btn.onclick = ()=>{
-    saveData(model.value,type.value,volume.value);
+    saveData(model.value, type.value, volume.value);
 }
