@@ -21,12 +21,13 @@ let model = document.forms.car.model;
 let type = document.forms.car.type;
 let volume = document.forms.car.volume;
 let btn = document.getElementById('buttonTwo');
+let keys = 'keys';
 
 let saveData = (model, type, volume) =>{
-    let data = [];
-    let car = {
-        model: model,
-        type: type,
-        volume:volume
-    }
+    let arrdata = JSON.parse(localStorage.getItem(data)) || [];
+    arrdata.push({model,type,volume});
+    localStorage.setItem(keys, JSON.stringify(arrdata));
+};
+btn.onclick = ()=>{
+    saveData(model.value,type.value,volume.value);
 }
