@@ -17,3 +17,16 @@ button.onclick = ()=>{
 }
 // -створити форму з інпутами для model,type та volume автівки.
 //     при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+let model = document.forms.car.model;
+let type = document.forms.car.type;
+let volume = document.forms.car.volume;
+let btn = document.getElementById('buttonTwo');
+
+let saveData = (model, type, volume) =>{
+    let data = [];
+    let car = {
+        model: model,
+        type: type,
+        volume:volume
+    }
+}
