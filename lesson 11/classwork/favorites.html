@@ -21,18 +21,6 @@
     }
 
 
-    let tbl = document.getElementById('tbl');
-    let rows = +prompt('rows?'); // 10
-    let cells = +prompt('cells?'); // 5
-    for (let i = 0; i < rows; i++) {
-        let tr = document.createElement('tr');
-        for (let j = 0; j < cells; j++) {
-            let td = document.createElement('td');
-            td.innerText = `cell ${i + 1} ${j + 1}`;
-            tr.append(td);
-        }
-        tbl.append(tr);
-    }
 </script>
 
 </body>

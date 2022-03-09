@@ -37,7 +37,7 @@
     let userDiv = document.createElement('div');
     userDiv.innerText = user.name + " " + user.age + " " + user.status;
     let button = document.createElement('button');
-    button.innerHTML = <strong>Add to favorites</strong>;
+    button.innerHTML = `<strong>Add to favorites</strong>`;
     button.onclick= function (e) {
       favorites.push(user);
       localStorage.setItem('favorites', JSON.stringify(favorites));
