@@ -1,0 +1,29 @@
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1440px;
+    justify-content: center;
+}
+.postDiv,
+.comments {
+    margin: 5px;
+    width: 240px;
+    height: 260px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.postDiv:hover,
+.comments:hover{
+    background: #d5cdcd;
+    transition: .4s;
+
+}
+.postDiv h3,
+.comments h3{
+    margin: 0;
+}
