@@ -12,7 +12,6 @@ wrapper.classList.add('wrapper');
 document.body.appendChild(wrapper);
 
 let conteiner = document.createElement('div');
-
 conteiner.classList.add('user-details');
 
 conteiner.innerHTML = `
@@ -29,23 +28,27 @@ wrapper.appendChild(conteiner);
 let button = document.createElement('button');
 button.classList.add('buttonPost');
 button.innerText = 'Post of current user';
+wrapper.appendChild(button);
 
 button.onclick = function () {
     this.disabled = true;
     fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
         .then(value => value.json())
         .then(value => {
+            let posts = document.createElement('div');
+            posts.classList.add('posts');
+            wrapper.appendChild(posts)
             for (let post of value) {
                 let postConteiner = document.createElement('div');
                 postConteiner.classList.add('post');
-                postConteiner.innerText = post.title;
+                postConteiner.innerHTML = `<h4>${post.title}</h4>`;
                 let postButton = document.createElement('button');
                 postButton.innerText = 'Post details';
                 postButton.onclick = function () {
                     location.href = `./post-details.html?data=${JSON.stringify(post)}`;
                 };
                 postConteiner.appendChild(postButton);
-                wrapper.appendChild(postConteiner);
+                posts.appendChild(postConteiner);
 
 
 
