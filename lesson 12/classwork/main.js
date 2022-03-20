@@ -36,6 +36,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                                     <p>${comment.body}</p>`;
 
                                 postDiv.appendChild(commentWrapp);
+
                             }
                             button.disabled = true;
                         }
